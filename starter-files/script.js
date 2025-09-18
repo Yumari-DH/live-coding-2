@@ -2,6 +2,7 @@
 const API_ENDPOINT = 'https://yesno.wtf/api';
 const answer = document.getElementById("answer");
 const button = document.getElementById("button");
+const input = document.getElementById("input");
 
 /**
  * STEPS:
@@ -23,6 +24,13 @@ function fetchAnswer() {
             console.log(dataJson); //objeto completo
             console.log(dataJson.answer); //solo la respuesta
             answer.textContent = dataJson.answer;
+
+            setTimeout(()=>{
+                answer.textContent="";
+                input.value="";
+                console.log("se limpió después de 5 seg");
+            }
+                ,5000);
         })
 
         .catch(error => console.log("Hubo un error", error.message));
@@ -32,7 +40,6 @@ function fetchAnswer() {
 //fetchAnswer();
 console.log("script cargado", button);
 button.addEventListener("click", function (event) {
-
 
     event.preventDefault();
     console.log("click detectado");
