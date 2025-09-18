@@ -71,7 +71,7 @@ body {
 
 .stars,
 .twinkling,
-.clouds {
+/* .clouds {
     position: absolute;
     top: 0;
     left: 0;
@@ -80,7 +80,7 @@ body {
     width: 100%;
     height: 100%;
     display: block;
-}
+} */
 
 .stars {
     background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;

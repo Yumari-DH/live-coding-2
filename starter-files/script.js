@@ -29,7 +29,7 @@ function fetchAnswer() {
 
 }//fn fetchAnswer
 
-fetchAnswer();
+//fetchAnswer();
 console.log("script cargado", button);
 button.addEventListener("click", function (event) {
 
