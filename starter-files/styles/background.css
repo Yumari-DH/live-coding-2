@@ -94,9 +94,9 @@ body {
     animation: move-twink-back 200s linear infinite;
 }
 
-.clouds {
+/* .clouds {
     background: transparent url(https://i.imgur.com/v3xI5rv.png) repeat top center;
     z-index: -100;
 
     animation: move-clouds-back 600s linear infinite;
-}
+} */

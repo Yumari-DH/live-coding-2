@@ -1,5 +1,7 @@
 // API
 const API_ENDPOINT = 'https://yesno.wtf/api';
+const answer = document.getElementById("answer");
+const button = document.getElementById("button");
 
 /**
  * STEPS:
@@ -11,3 +13,31 @@ const API_ENDPOINT = 'https://yesno.wtf/api';
  * 5. Optional: add loading/error states
  *
  */
+
+function fetchAnswer() {
+
+    fetch(API_ENDPOINT)
+
+        .then(response => response.json())
+        .then(dataJson => {
+            console.log(dataJson); //objeto completo
+            console.log(dataJson.answer); //solo la respuesta
+            answer.textContent = dataJson.answer;
+        })
+
+        .catch(error => console.log("Hubo un error", error.message));
+
+}//fn fetchAnswer
+
+fetchAnswer();
+console.log("script cargado", button);
+button.addEventListener("click", function (event) {
+
+
+    event.preventDefault();
+    console.log("click detectado");
+    fetchAnswer();
+});
+
+console.log("script hasta el final");
+
